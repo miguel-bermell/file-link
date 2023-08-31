@@ -1,3 +1,4 @@
+import { Toaster, toast } from 'sonner'
 import { type UploadFileInfo } from '../interfaces/UploadFileInfo'
 
 interface FileCardProps {
@@ -7,6 +8,7 @@ interface FileCardProps {
 const copyToClipboard = async (text: string): Promise<void> => {
   try {
     await navigator.clipboard.writeText(text)
+    toast.success('Link copied successfully')
   } catch (err) {
     console.error(err)
   }
@@ -35,6 +37,7 @@ const FileCard: React.FC<FileCardProps> = ({ files }) => {
           </li>
         ))}
       </ul>
+      <Toaster richColors position="bottom-center"/>
     </div>
   )
 }

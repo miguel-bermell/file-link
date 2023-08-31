@@ -21,7 +21,6 @@ const Dropzone = () => {
 
   const handleUpdateFiles = (fileItems: FilePondFile[]) => {
     const updatedFiles: Array<FilePondInitialFile | File | Blob> = fileItems.map((fileItem) => fileItem.file)
-    console.log(updatedFiles)
     setFiles(updatedFiles)
   }
 
