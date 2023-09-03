@@ -20,11 +20,9 @@ export async function POST (req: NextRequest, res: NextResponse) {
   const buffer = await fileBlob.arrayBuffer()
   const fileBuffer = Buffer.from(buffer)
 
-  const [,fileExtension] = fileBlob.type.split('/')
-
   const params = {
     Bucket: BUCKET_NAME,
-    Key: `${fileBlob.name.substring(0, 25)}_${Date.now()}.${fileExtension}`,
+    Key: `${Date.now()}_${fileBlob.name}`,
     Body: fileBuffer,
     Tagging: 'auto-delete=true'
   }
