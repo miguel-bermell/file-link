@@ -22,3 +22,12 @@
 .file-wrapper .filepond--drop-label {
   color: #c7ccd8;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #313233;
+  border-radius: 5px;
+}
