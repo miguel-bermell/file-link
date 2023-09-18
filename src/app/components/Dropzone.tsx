@@ -26,7 +26,7 @@ const Dropzone = () => {
 
   const handleFileProcessed = (response: any) => {
     const responseData = JSON.parse(response)
-    setUploadFilesInfo((prevState) => [...prevState, responseData])
+    setUploadFilesInfo((prevState) => [responseData, ...prevState])
     return responseData
   }
 
