@@ -33,7 +33,7 @@ export default function Home () {
       </div>
       <div className="absolute inset-0 bg-slate-700 opacity-50"></div>
       <div className="flex flex-col items-center justify-center h-full relative z-10 text-white">
-        <h1 className="text-4xl font-bold mb-10">
+        <h1 className="text-4xl font-bold mb-10 text-center">
           Upload anything, from anywhere
         </h1>
         <div>
